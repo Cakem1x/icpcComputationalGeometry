@@ -29,3 +29,6 @@
 *.toc
 *.vrb
 *.xdy
+*.bcf
+*.run.xml
+*.pdf
