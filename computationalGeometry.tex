@@ -11,8 +11,6 @@
 %% burger@kit.edu
 
 \documentclass[18pt]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage{subfigure} %Nur bei Teilbildern (a) (b) (c) notwendig
 
 %% SLIDE FORMAT
 
@@ -46,7 +44,7 @@
 %% TikZ INTEGRATION
 
 % use these packages for PCM symbols and UML classes
-% \usepackage{templates/tikzkit}
+\usepackage{templates/tikzkit}
 % \usepackage{templates/tikzuml}
 
 % the presentation starts here
@@ -79,7 +77,6 @@
 \end{frame}
 
 % our chapters:
-\input{chapters/1_convexHull}
 \input{chapters/3_coordCompression}
 \input{chapters/4_sweepLine}
 

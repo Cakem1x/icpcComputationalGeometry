@@ -1,31 +1,14 @@
-\section{Sweep Line}
-\subsection{Allgemeine Eigenschaften}
+\section{Sweep}
 \begin{frame}
-	\frametitle{{Allgemeine Eigenschaften}}
-	\begin{itemize}
-		\pause
-		\item{Reduziert ein n-dimensionales Problem auf ein (n-1)-dimensionales Problem}
-		\pause
-		\item{Im 2-Dimensionalen Raum}
-		\pause
-		\begin{itemize}
-			\item{Gerade, die über sich über die Ebene bewegt}
-			\pause
-			\item{Nur an bestimmten Punkten wird etwas getan}
-		\end{itemize}
-		\pause
-		\item{Sweep Line verwendet}
-		\pause		
-		\begin{itemize}
-			\item{Status S}
-			\pause
-			\item{Event Queue Q}
-		\end{itemize}
-	\end{itemize}
+	\begin{center}
+		\textbf{Sweep}
+	\end{center}
 \end{frame}
-\subsection{Line Intersection}
+
+\subsection{Line Segment Intersection}
 \begin{frame}
-	\frametitle{{Line Intersection - Problem}}
+	\frametitle{{Line Segment Intersection}}
+	\begin{block}{Das Problem}
 	\begin{itemize}
 		\pause
 		\item{Gegeben:}
@@ -33,7 +16,7 @@
 		\begin{itemize}
 			\item{2D Koordinatensystem}
 			\pause
-			\item{Liniensegmente}
+			\item{n Liniensegmente}
 		\end{itemize}
 		\pause
 		\item{Gesucht:}
@@ -41,5 +24,114 @@
 		\begin{itemize}
 			\item{Anzahl der Schnittpunkte}
 		\end{itemize}
+	\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\frametitle{{Line Segment Intersection}}
+	\begin{itemize}
+		\item \textbf{Naiv}
+		\begin{itemize}
+			\pause
+			\item{Vergleiche jedes Segment mit jedem anderen}
+			\pause
+			\item{Resultierende Laufzeit: $\mathcal O(n²)$}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{{Line Segment Intersection}}
+	\begin{itemize}
+		\item \textbf{Weitere \"Uberlegungen}
+		\pause
+		\item{Betrachten der Situation in der Stelle a}
+		\pause
+		\item{Nur direkt benachbarte Segmente k\"onnen sich schneiden}
+		\pause
+		\item{Dieser Status \"andert sich nur dann, wenn}
+		\begin{itemize}
+			\pause
+			\item{Ein neues Segment beginnt}
+			\pause
+			\item{Ein Segment endet}
+			\pause
+			\item{Wenn sich zwei Segmente schneiden}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{{Line Segment Intersection}}
+	\begin{itemize}
+		\item \textbf{Sweep Line Algorithmus}
+	\end{itemize}
+\end{frame}
+
+\subsection{Allgemeine Eigenschaften}
+\begin{frame}
+	\frametitle{{Allgemeine Eigenschaften von Sweep Algorithmen}}
+	\begin{itemize}
+		\item Anwendbar auf Probleme beliebig hoher Dimension
+		\begin{itemize}
+			\pause
+			\item{Im 2-Dimensionalen Raum}
+			\begin{itemize}
+				\item{Gerade, die über sich über die Ebene bewegt}
+			\end{itemize}
+			\pause
+			\item{Im 3-Dimensionalen Raum}
+			\begin{itemize}
+				\item{Ebene, die über sich durch den K\"orper bewegt}
+			\end{itemize}
+			\pause
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{{Allgemeine Eigenschaften von Sweep Algorithmen}}
+	\begin{itemize}
+		\item{Sweep Algorithmen verwenden}
+		\pause		
+		\begin{itemize}
+			\item{Einen Status}
+			\pause
+			\item{Im Beispiel:}
+			\begin{itemize}
+				\item{Noch nicht abgeschlossene Segmente}
+				\pause
+				\item{Und deren Sortierung}
+			\end{itemize}
+			\pause
+			\item{Eine Event Queue}
+			\pause
+			\item{Im Beispiel:}
+			\begin{itemize}
+				\item{Endpunkte von Segmenten}
+				\pause
+				\item{Schnittpunkte von Segmenten}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Weitere Algorithmen}
+\begin{frame}
+	\frametitle{{Weitere Sweep Algorithmen}}
+	\begin{itemize}
+		\pause
+		\item Fortune's algorithm
+		\begin{itemize}
+			\item Sweep Line Algorithmus zur Erstellung eines Voronoi-Diagramms
+			\pause			
+			\item M\"ogliches Anwendungsgebiet: Robotik, Hindernissen fern bleiben
+		\end{itemize}
+		\pause
+		\item Boolsche Operationen auf Polygone
+		\begin{itemize}
+			\item M\"ogliche Anwendungsgebiete: Computergraphik oder CAD-Systeme
+		\end{itemize}
+		\pause
+		\item Closest Pair
+		\pause
+		\item Viele mehr!
 	\end{itemize}
 \end{frame}
