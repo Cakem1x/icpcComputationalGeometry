@@ -35,7 +35,7 @@
 			\pause
 			\item{Vergleiche jedes Segment mit jedem anderen}
 			\pause
-			\item{Resultierende Laufzeit: $\mathcal O(n²)$}
+			\item{Resultierende Laufzeit: $\mathcal O(n^2)$}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -44,30 +44,73 @@
 	\begin{itemize}
 		\item \textbf{Weitere \"Uberlegungen}
 		\pause
-		\item{Betrachten der Situation in der Stelle a}
+		\item{Nur nahe Segmente k\"onnen sich schneiden}
 		\pause
-		\item{Nur direkt benachbarte Segmente k\"onnen sich schneiden}
+		\item{Betrachten der Situation an der Stelle a}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{{Line Segment Intersection}}
+	\begin{itemize}
+		\item \textbf{Sweep Line Algorithmus, erster Ansatz}
 		\pause
-		\item{Dieser Status \"andert sich nur dann, wenn}
+	\end{itemize}
+	\begin{block}{Datenstrukturen}
+		\begin{itemize}
+			\item Zustand der Sweep Line S
+			\pause
+			\item Event Queue Q
+		\end{itemize}
+	\end{block}
+	\begin{itemize}
+		\pause
+		\item Beginnt ein Segment
+		\begin{itemize}
+			\pause		
+			\item F\"uge das Segment dem Zustand hinzu
+			\pause
+			\item \"Uberpr\"ufe, ob es Segmente in S schneidet
+		\end{itemize}
+		\pause
+		\item Endet ein Segment
 		\begin{itemize}
 			\pause
-			\item{Ein neues Segment beginnt}
-			\pause
-			\item{Ein Segment endet}
-			\pause
-			\item{Wenn sich zwei Segmente schneiden}
+			\item Entferne das Segment aus dem Zustand
 		\end{itemize}
+		\pause
+		\item Das geht noch besser!
 	\end{itemize}
 \end{frame}
 \begin{frame}
 	\frametitle{{Line Segment Intersection}}
 	\begin{itemize}
 		\item \textbf{Sweep Line Algorithmus}
+		\pause
+		\item Verlgeiche nur direkt benachbarte Segmente
+		\pause
+		\item Dann brauchen wir mehr Eventpunkte:
+		\begin{itemize}
+			\pause
+			\item Bei Schnitt zweier Segmente
+		\end{itemize}
+	\end{itemize}
+	\pause
+	\begin{block}{Datenstrukturen}
+		\begin{itemize}
+			\item Zustand der Sweep Line S \pause{, jetzt sortiert!}
+			\pause
+			\item Event Queue Q
+		\end{itemize}
+	\end{block}
+	\begin{itemize}
+		\pause
+		\item TODO: Genauere Ausarbeitung des richtigen Algorithmus
 	\end{itemize}
 \end{frame}
 
 \subsection{Allgemeine Eigenschaften}
 \begin{frame}
+TODO: Hier k\"urzen?
 	\frametitle{{Allgemeine Eigenschaften von Sweep Algorithmen}}
 	\begin{itemize}
 		\item Anwendbar auf Probleme beliebig hoher Dimension
@@ -75,14 +118,13 @@
 			\pause
 			\item{Im 2-Dimensionalen Raum}
 			\begin{itemize}
-				\item{Gerade, die über sich über die Ebene bewegt}
+				\item{Gerade, die \"uber sich über die Ebene bewegt}
 			\end{itemize}
 			\pause
 			\item{Im 3-Dimensionalen Raum}
 			\begin{itemize}
-				\item{Ebene, die über sich durch den K\"orper bewegt}
+				\item{Ebene, die sich durch den K\"orper bewegt}
 			\end{itemize}
-			\pause
 		\end{itemize}
 	\end{itemize}
 \end{frame}
