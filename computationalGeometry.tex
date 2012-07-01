@@ -12,6 +12,11 @@
 
 \documentclass[18pt]{beamer}
 
+\usepackage[utf8]{inputenc}
+\usepackage{subfigure} %Nur bei Teilbildern (a) (b) (c) notwendig
+\usepackage{floatflt}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
 %% SLIDE FORMAT
 
 % use 'beamerthemekit' for standard 4:3 ratio
@@ -77,6 +82,8 @@
 \end{frame}
 
 % our chapters:
+\input{chapters/1_convexHull}
+\input{chapters/2_rangeQuery}
 \input{chapters/3_coordCompression}
 \input{chapters/4_sweepLine}
 
