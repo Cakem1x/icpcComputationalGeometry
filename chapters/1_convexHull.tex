@@ -326,11 +326,11 @@ $\Rightarrow$ vom Punkt ganz links bis zum Punkt ganz rechts schreitet die konve
 	\State $S \gets sortiereLexikographisch(P)$
 	\State $i \gets 1$
 	\While{$i <  |P|$}
-		\If{$S_{i-1}\rightarrow S_{i}$ nach $S_{i}\rightarrow S_{i+1}$ eine Rechtsabbiegung}\\
-			i++
-		\Else \\
-			Entferne Element $S_i$ aus $S$\\
-			i--
+		\If{$S_{i-1}\rightarrow S_{i}$ nach $S_{i}\rightarrow S_{i+1}$ eine Rechtsabbiegung} 
+		\State $i \gets i + 1$
+		\Else 
+		\State Entferne Element $S_i$ aus $S$
+		\State $i \gets i - 1$
 		\EndIf
 	\EndWhile
 	\end{algorithmic}

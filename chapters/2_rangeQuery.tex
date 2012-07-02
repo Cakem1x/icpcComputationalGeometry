@@ -6,7 +6,117 @@
 
 \begin{frame}
 	\frametitle{Bereichssuchen - 1D}
-	TODO Bereichssuchem im Eindimensionalen mit Binary Tree und Beispiel und Pseudocode
+	Gegeben sind n verschiedene Zahlen $z_1, ... z_n$ und der Bereich [x,y].\\
+	Gesucht sind nun die Zahlen $z_i$, die sich im Bereich [x,y] befinden \\
+	\pause
+	\textbf{Idee:} Sortiere die Zahlen und erstelle einen binären Baum. In diesem werden nun die Zahlen gesucht.
+\end{frame}
+
+\begin{frame}
+	\frametitle{{Bereichssuchen - 1D}}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/1d}
+	\end{center}
+\end{figure}
+Binärer Baum zu den Zahlen 3, 10, 19, 23, 30, 37, 49, 59, 62, 70, 80, 89, 93, 97
+\end{frame}
+
+\begin{frame}
+	\frametitle{{Bereichssuchen - 1D}}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/1d2}
+	\end{center}
+\end{figure}
+Suchpfad für die Zahl 25
+\end{frame}
+
+\begin{frame}
+	\frametitle{{Bereichssuchen - 1D}}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/1d3}
+	\end{center}
+\end{figure}
+Suchpfad für 25 und 90
+\end{frame}
+
+\begin{frame}
+	\frametitle{{Bereichssuchen - 1D}}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/1d4}
+	\end{center}
+\end{figure}
+Bereichssuche für [25, 90]
+\end{frame}
+
+\begin{frame}
+	\frametitle{{Bereichssuchen - 1D}}
+	\textbf{Weiße Knoten: } werden für die Suche nie betrachtet\\
+	\textbf{Graue Knoten: } wurden besucht, es ist aber unklar, ob sie zur Ausgabe gehören\\
+	\textbf{Schwarze Knoten: } wurden besucht und gesamter Unterteilbaum gehört zur Ausgabe.
+\end{frame}
+
+\begin{frame}
+	\frametitle{{Bereichssuchen - 1D}}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/1d5}
+	\end{center}
+\end{figure}
+Bereichssuche für [61, 90]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - 1D SplitNode}
+	Sei $T$ der Baum und $x, x'$ zwei Werte mit $x \leq x'$\newline\newline
+	$FindeSplitNode(T, x, x')$\\
+	\begin{algorithmic}
+	\State $v \gets root(T)$
+	\While{v ist kein Blatt und ($x' \leq x_v \mbox{ oder } x>x_v$)}
+		\If{$x' \leq x_v$}
+			\State $v \gets lc(v)$
+		\Else
+			\State $v \gets rc(v)$
+		\EndIf
+	\EndWhile
+	\end{algorithmic}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bereichssuchen - 1D Pseudocode}
+	$1DBereichssuche(T,x,x')$
+	\begin{algorithmic}
+	\State $v_{split} \gets FindSplitNode(T, x, x')$
+	\If {$v_{split} \mbox{ist ein Blatt}$}
+		\State $\mbox{Prüfe ob }v_{split} \mbox{ gemeldet werden muss}$
+	\Else
+		\State $v \gets lc(v_{split})$
+		\While {$\mbox{v ist kein Blatt}$}
+			\If{$x \leq x_v$}
+				\State $meldeTeilbaum(rc(v))$
+				\State $v \gets lc(v)$
+			\Else 
+				\State $v\gets rc(v)$
+			\EndIf
+		\EndWhile
+		\State $\mbox{Prüfe, ob v gemeldet werden muss}$
+		\State $\mbox{mache das gleiche noch äquivalent mit x'...}$
+	\EndIf
+	\end{algorithmic}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bereichssuchen - 1D Laufzeit}
+	\textbf{Graue Knoten: } Es gibt genau zwei Pfade mit grauen Knoten. Da der Baum balanciert ist $\Rightarrow O(log(n))$\\
+	\pause
+	\textbf{Schwarze Knoten: } Ein Teilbaum mit k Knoten hat k-1 interne Knoten. Wir finden also k Knoten durch das Traversieren $\Rightarrow O(k)$\newline
+	\newline
+	$\Rightarrow O(log(n) + k)$
 \end{frame}
 
 \begin{frame}
