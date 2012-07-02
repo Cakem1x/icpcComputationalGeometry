@@ -11,7 +11,7 @@
 	\begin{block}{Das Problem}
 	\begin{itemize}
 		\pause
-		\item{Gegeben:}
+		\item{Eingabe:}
 		\pause
 		\begin{itemize}
 			\item{2D Koordinatensystem}
@@ -19,13 +19,23 @@
 			\item{n Liniensegmente}
 		\end{itemize}
 		\pause
-		\item{Gesucht:}
+		\item{Ausgabe:}
 		\pause
 		\begin{itemize}
 			\item{Anzahl der Schnittpunkte}
 		\end{itemize}
 	\end{itemize}
 	\end{block}
+\end{frame}
+\begin{frame}
+	\frametitle{{Line Segment Intersection}}
+	\begin{itemize}
+		\item \textbf{Anwendung}
+		\pause
+		\item Schnitt von Layern bei Kartographie-Software
+		\pause
+		TODO: IMAGE
+	\end{itemize}
 \end{frame}
 \begin{frame}
 	\frametitle{{Line Segment Intersection}}
@@ -55,11 +65,17 @@
 		\item \textbf{Sweep Line Algorithmus, erster Ansatz}
 		\pause
 	\end{itemize}
-	\begin{block}{Datenstrukturen}
+	\begin{block}{Ben\"otigte Daten}
 		\begin{itemize}
 			\item Zustand der Sweep Line S
+			\begin{itemize}
+				\item Segmente, welche die Sweep Line schneiden
+			\end{itemize}
 			\pause
 			\item Event Queue Q
+			\begin{itemize}
+				\item Endpunkte der Segmente, aufsteigend geordnet nach ihrer x-Koordinate
+			\end{itemize}
 		\end{itemize}
 	\end{block}
 	\begin{itemize}
@@ -88,29 +104,38 @@
 		\pause
 		\item Verlgeiche nur direkt benachbarte Segmente
 		\pause
-		\item Dann brauchen wir mehr Eventpunkte:
+		\item Neuer Eventpunkt:
 		\begin{itemize}
 			\pause
-			\item Bei Schnitt zweier Segmente
+			\item Beim Schnitt zweier Segmente
 		\end{itemize}
 	\end{itemize}
 	\pause
-	\begin{block}{Datenstrukturen}
+	\begin{block}{Ben\"otigte Daten}
 		\begin{itemize}
-			\item Zustand der Sweep Line S \pause{, jetzt sortiert!}
+			\item Zustand der Sweep Line S
+			\begin{itemize}
+				\item Segmente, welche die Sweep Line schneiden
+				\pause
+				\item F\"ur jedes Segment die Nachbarn
+			\end{itemize}
 			\pause
 			\item Event Queue Q
+			\begin{itemize}
+				\item Endpunkte der Segmente, aufsteigend geordnet nach ihrer x-Koordinate
+				\pause
+				\item Schnittpunkte zwischen Segmenten
+			\end{itemize}
 		\end{itemize}
 	\end{block}
+	\pause
 	\begin{itemize}
-		\pause
-		\item TODO: Genauere Ausarbeitung des richtigen Algorithmus
+		\item Bentley Ottmann Algorithmus
 	\end{itemize}
 \end{frame}
 
 \subsection{Allgemeine Eigenschaften}
 \begin{frame}
-TODO: Hier k\"urzen?
 	\frametitle{{Allgemeine Eigenschaften von Sweep Algorithmen}}
 	\begin{itemize}
 		\item Anwendbar auf Probleme beliebig hoher Dimension
@@ -124,32 +149,6 @@ TODO: Hier k\"urzen?
 			\item{Im 3-Dimensionalen Raum}
 			\begin{itemize}
 				\item{Ebene, die sich durch den K\"orper bewegt}
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{{Allgemeine Eigenschaften von Sweep Algorithmen}}
-	\begin{itemize}
-		\item{Sweep Algorithmen verwenden}
-		\pause		
-		\begin{itemize}
-			\item{Einen Status}
-			\pause
-			\item{Im Beispiel:}
-			\begin{itemize}
-				\item{Noch nicht abgeschlossene Segmente}
-				\pause
-				\item{Und deren Sortierung}
-			\end{itemize}
-			\pause
-			\item{Eine Event Queue}
-			\pause
-			\item{Im Beispiel:}
-			\begin{itemize}
-				\item{Endpunkte von Segmenten}
-				\pause
-				\item{Schnittpunkte von Segmenten}
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
