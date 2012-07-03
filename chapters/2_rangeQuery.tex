@@ -1,4 +1,5 @@
 \section{Bereichssuchen}
+\subsection{1D Bereichssuche}
 \begin{frame}
 	\frametitle{Bereichssuchen - Motivation}
 	TODO Bereichssuchen ist toll, Google Maps etc
@@ -116,10 +117,143 @@ Bereichssuche für [61, 90]
 	\pause
 	\textbf{Schwarze Knoten: } Ein Teilbaum mit k Knoten hat k-1 interne Knoten. Wir finden also k Knoten durch das Traversieren $\Rightarrow O(k)$\newline
 	\newline
-	$\Rightarrow O(log(n) + k)$
+	 \pause
+	$\Rightarrow O(log(n) + k)$ \newline
+	\newline
+	\pause
+	Der Baum muss allerdings auch erstmal erstellt werden. Das liegt in $O(n)$.
+\end{frame}
+\subsection{kd-Baum}
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+	Im 2-dimensionalen sind Bereichssuchen ähnlich zu machen. \\
+	Dafür werden \textbf{kd-Bäume} benutzt.
+	\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/2d.png}
+	\end{center}
+\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bereichssuchen - KD-Baum}
-	TODO Bereichssuchem im 2-dimensionalen Raum, quasi Binary Tree im Binary Tree. Mit Beispiel und Pseudocode
+	\frametitle{Bereichssuchen - kd-Baum Die Idee}
+	Wir bauen einen Baum ähnlich wie den für die 1-D Suche. Da wir im 2D x und y betrachten müssen, splitten wir beim kd-Baum nacheinander erst nach x und dann nach y auf.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd0}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree0}}
+			}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd1}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree1}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd2}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree2}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd3}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree3}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd4}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree4}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd5}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree5}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd6}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree6}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd7}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree7}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd8}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree8}}
+			}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Bereichssuchen - kd-Baum}
+		\begin{figure}
+		\mbox{
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd9}}\quad
+			\hspace{1cm}
+			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree9}}
+			}
+	\end{figure}
 \end{frame}
