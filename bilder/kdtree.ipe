@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70010" creator="Ipe 7.0.10">
+<info created="D:20120702230124" modified="D:20120702232758"/>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+<path fill="sym-fill">
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+<path fill="sym-fill">
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<text layer="alpha" matrix="1 0 0 1 112 32" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_1$</text>
+<path matrix="1 0 0 1 122.504 20.7959" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 16 -16" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_2$</text>
+<path matrix="1 0 0 1 26.5038 -27.2041" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 208 -16" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_3$</text>
+<path matrix="1 0 0 1 218.504 -27.2041" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 64 -80" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_5$</text>
+<path matrix="1 0 0 1 74.5038 -91.2041" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 160 -80" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_6$</text>
+<path matrix="1 0 0 1 170.504 -91.2041" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 256 -80" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_7$</text>
+<path matrix="1 0 0 1 266.504 -91.2041" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 -48 -80" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_4$</text>
+<path matrix="1 0 0 1 -37.496 -91.2041" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 -96 -144" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_8$</text>
+<path matrix="1 0 0 1 -85.496 -155.204" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<text matrix="1 0 0 1 128 -144" transformations="translations" pos="178 479" stroke="black" type="label" width="9.664" height="9.965" depth="2.15" valign="baseline" size="Large">$l_9$</text>
+<path matrix="1 0 0 1 138.504 -155.204" stroke="black" pen="fat">
+11.6598 0 0 11.6598 172.302 494.061 e
+</path>
+<path matrix="1 0 0 1 40.6154 -70.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 -72.383 -214.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_2$</text>
+<path matrix="1 0 0 1 -7.3846 -70.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 -120.383 -214.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_1$</text>
+<path matrix="1 0 0 1 88.6154 -6.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 -24.383 -150.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_3$</text>
+<path matrix="1 0 0 1 152.615 -6.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 39.617 -150.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_4$</text>
+<path matrix="1 0 0 1 200.615 -6.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 87.617 -150.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_5$</text>
+<path matrix="1 0 0 1 216.615 -70.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 103.617 -214.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_6$</text>
+<path matrix="1 0 0 1 264.615 -70.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 151.617 -214.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_7$</text>
+<path matrix="1 0 0 1 296.615 -6.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 183.617 -150.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_8$</text>
+<path matrix="1 0 0 1 344.615 -6.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 231.617 -150.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_9$</text>
+<path matrix="1 0 0 1 392.615 -6.4615" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 279.617 -150.486" transformations="translations" pos="178 479" stroke="black" type="label" width="17.511" height="6.176" depth="2.79" valign="baseline" size="Large">$p_{10}$</text>
+<path stroke="black" pen="fat">
+285.911 507.318 m
+208.807 472.851 l
+</path>
+<path stroke="black" pen="fat">
+301.66 505.424 m
+379.27 468.551 l
+</path>
+<path stroke="black" pen="fat">
+188.289 461.822 m
+189.72 459.549 l
+141.751 412.223 l
+</path>
+<path stroke="black" pen="fat">
+126.723 394.453 m
+91.2898 349.62 l
+</path>
+<path stroke="black" pen="fat">
+80.1694 329.27 m
+63.6538 279.909 l
+</path>
+<path stroke="black" pen="fat">
+91.0848 328.011 m
+104.423 279.91 l
+</path>
+<path stroke="black" pen="fat">
+139.971 392.403 m
+159.038 343.909 l
+</path>
+<path stroke="black" pen="fat">
+207.508 459.096 m
+241.502 413.241 l
+</path>
+<path stroke="black" pen="fat">
+241.405 392.524 m
+224.423 343.909 l
+</path>
+<path stroke="black" pen="fat">
+252.337 392.593 m
+267.5 343.909 l
+</path>
+<path stroke="black" pen="fat">
+338.635 391.968 m
+314.1 350.042 l
+</path>
+<path stroke="black" pen="fat">
+346.332 391.743 m
+365.192 343.909 l
+</path>
+<path stroke="black" pen="fat">
+385.119 456.678 m
+348.515 413.023 l
+</path>
+<path stroke="black" pen="fat">
+394.919 455.947 m
+430.586 411.126 l
+</path>
+<path stroke="black" pen="fat">
+433.547 392.451 m
+417.5 343.909 l
+</path>
+<path stroke="black" pen="fat">
+443.485 392.177 m
+458.269 343.909 l
+</path>
+<path stroke="black" pen="fat">
+305.123 328.676 m
+285.961 279.909 l
+</path>
+<path stroke="black" pen="fat">
+316.331 328.589 m
+335.192 279.909 l
+</path>
+<path matrix="1 0 0 1 88.6154 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 -24.383 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_2$</text>
+<path matrix="1 0 0 1 56.6154 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 -56.383 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_1$</text>
+<path matrix="1 0 0 1 120.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 7.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_3$</text>
+<path matrix="1 0 0 1 152.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 39.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_4$</text>
+<path matrix="1 0 0 1 184.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 71.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_5$</text>
+<path matrix="1 0 0 1 216.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 103.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_6$</text>
+<path matrix="1 0 0 1 248.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 135.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_7$</text>
+<path matrix="1 0 0 1 280.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 167.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_8$</text>
+<path matrix="1 0 0 1 312.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 199.617 -262.486" transformations="translations" pos="178 479" stroke="black" type="label" width="12.53" height="6.176" depth="2.79" valign="baseline" size="Large">$p_9$</text>
+<path matrix="1 0 0 1 344.615 -118.462" stroke="black" pen="fat">
+59.8076 350.371 m
+59.8076 326.525 l
+81.3461 326.525 l
+81.3461 350.371 l
+h
+</path>
+<text matrix="1 0 0 1 230.079 -264.794" transformations="translations" pos="178 479" stroke="black" type="label" width="17.511" height="6.176" depth="2.79" valign="baseline" size="Large">$p_{10}$</text>
+<use name="mark/disk(sx)" pos="288 544" size="normal" stroke="white"/>
+<use name="mark/disk(sx)" pos="512 336" size="normal" stroke="white"/>
+<use name="mark/disk(sx)" pos="32 336" size="normal" stroke="white"/>
+<use name="mark/disk(sx)" pos="256 192" size="normal" stroke="white"/>
+</page>
+</ipe>

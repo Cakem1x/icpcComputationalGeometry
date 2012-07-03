@@ -32,7 +32,6 @@
 \textbf{Motivation}
 \begin{itemize}
 	\item Kollisionsberechnung
-	\item Voronoi Diagramm
 	\item konvexe Optimierung
 \end{itemize}
 \hspace{0pt}\\\\
@@ -134,16 +133,17 @@
 \State $P\gets \{\mbox{Punkt ganz links}\}$
 \State $start\gets \mbox{Punkt ganz links}$
 \State $current\gets \mbox{Punkt ganz links}$
-\\
+\pause
 \Repeat 
-	\For{$p \in P$}
+	\For{$\mbox{alle }p \in P$}
 		\If{kein Punkt befindet sich links von der Gerade current---p}
-			P += p\\
-			current = p
+			\State $P += p$
+			\State $current \gets p$
 		\EndIf
 	\EndFor
 \Until{current == start}
 \end{algorithmic}
+\pause
 $\Rightarrow O(n^2)$
 \end{frame}
 
@@ -175,90 +175,69 @@ $\Rightarrow$ vom Punkt ganz links bis zum Punkt ganz rechts schreitet die konve
 
 \begin{frame}
 	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham1}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham2}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham3}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham4}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham5}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham6}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham7}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham8}
-	\end{center}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{{Konvexe Hülle - Weitere Überlegungen}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/graham9}
-	\end{center}
-\end{figure}
+	\only<1>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham1}
+			\end{center}
+		\end{figure}
+	}
+	\only<2>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham2}
+			\end{center}
+		\end{figure}
+	}
+	\only<3>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham3}
+			\end{center}
+		\end{figure}
+	}
+	\only<4>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham4}
+			\end{center}
+		\end{figure}
+	}
+	\only<5>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham5}
+			\end{center}
+		\end{figure}
+	}
+	\only<6>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham6}
+			\end{center}
+		\end{figure}
+	}
+	\only<7>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham7}
+			\end{center}
+		\end{figure}
+	}
+	\only<8>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham8}
+			\end{center}
+		\end{figure}
+	}
+	\only<9>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/graham9}
+			\end{center}
+		\end{figure}
+	}
 \end{frame}
 
 \begin{frame}
@@ -268,30 +247,27 @@ $\Rightarrow$ vom Punkt ganz links bis zum Punkt ganz rechts schreitet die konve
 
 \begin{frame}
 	\frametitle{{Graham Scan}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/scan1}
-	\end{center}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{{Graham Scan}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/scan2}
-	\end{center}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{{Graham Scan}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/scan3}
-	\end{center}
-\end{figure}
+	\only<1>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/scan1}
+			\end{center}
+		\end{figure}
+	}
+	\only<2>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/scan2}
+			\end{center}
+		\end{figure}
+	}
+	\only<3>{
+		\begin{figure}[htbp]
+			\begin{center}
+  			\includegraphics[width=.8\linewidth]{bilder/scan3}
+			\end{center}
+		\end{figure}
+	}
 \end{frame}
 
 \begin{frame}
@@ -322,18 +298,22 @@ $\Rightarrow$ vom Punkt ganz links bis zum Punkt ganz rechts schreitet die konve
 	\frametitle{{Graham Scan - Pseudocode}}
 	Sei $P$ eine Liste mit den Punkten $P_1$ bis $P_n$.\\
 	Sei $S$ die Liste, die am Ende ausgegeben wird.
+	\pause
 	\begin{algorithmic}
 	\State $S \gets sortiereLexikographisch(P)$
 	\State $i \gets 1$
+	\pause
 	\While{$i <  |P|$}
 		\If{$S_{i-1}\rightarrow S_{i}$ nach $S_{i}\rightarrow S_{i+1}$ eine Rechtsabbiegung} 
 		\State $i \gets i + 1$
+		\pause
 		\Else 
 		\State Entferne Element $S_i$ aus $S$
 		\State $i \gets i - 1$
 		\EndIf
 	\EndWhile
 	\end{algorithmic}
+	$\Rightarrow O(n*log(n))$
 \end{frame}
 
 

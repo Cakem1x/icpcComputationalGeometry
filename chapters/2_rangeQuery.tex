@@ -2,11 +2,14 @@
 \subsection{1D Bereichssuche}
 \begin{frame}
 	\frametitle{Bereichssuchen - Motivation}
-	TODO Bereichssuchen ist toll, Google Maps etc
+	\begin{itemize}
+		\item Datenbankabfrage
+		\item Google Maps
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bereichssuchen - 1D}
+	\frametitle{1D Bereichssuchen}
 	Gegeben sind n verschiedene Zahlen $z_1, ... z_n$ und der Bereich [x,y].\\
 	Gesucht sind nun die Zahlen $z_i$, die sich im Bereich [x,y] befinden \\
 	\pause
@@ -14,17 +17,17 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{{Bereichssuchen - 1D}}
-\begin{figure}[htbp]
-	\begin{center}
-  	\includegraphics[width=.8\linewidth]{bilder/1d}
-	\end{center}
-\end{figure}
-Binärer Baum zu den Zahlen 3, 10, 19, 23, 30, 37, 49, 59, 62, 70, 80, 89, 93, 97
+	\frametitle{{1D Bereichssuchen}}
+	\begin{figure}[htbp]
+		\begin{center}
+	  	\includegraphics[width=.8\linewidth]{bilder/1d}
+		\end{center}
+	\end{figure}
+	Binärer Baum zu den Zahlen 3, 10, 19, 23, 30, 37, 49, 59, 62, 70, 80, 89, 93, 97
 \end{frame}
 
 \begin{frame}
-	\frametitle{{Bereichssuchen - 1D}}
+	\frametitle{{1D Bereichssuchen}}
 \begin{figure}[htbp]
 	\begin{center}
   	\includegraphics[width=.8\linewidth]{bilder/1d2}
@@ -34,7 +37,7 @@ Suchpfad für die Zahl 25
 \end{frame}
 
 \begin{frame}
-	\frametitle{{Bereichssuchen - 1D}}
+	\frametitle{{1D Bereichssuchen}}
 \begin{figure}[htbp]
 	\begin{center}
   	\includegraphics[width=.8\linewidth]{bilder/1d3}
@@ -44,7 +47,7 @@ Suchpfad für 25 und 90
 \end{frame}
 
 \begin{frame}
-	\frametitle{{Bereichssuchen - 1D}}
+	\frametitle{{1D Bereichssuchen}}
 \begin{figure}[htbp]
 	\begin{center}
   	\includegraphics[width=.8\linewidth]{bilder/1d4}
@@ -54,14 +57,14 @@ Bereichssuche für [25, 90]
 \end{frame}
 
 \begin{frame}
-	\frametitle{{Bereichssuchen - 1D}}
+	\frametitle{{1D Bereichssuchen}}
 	\textbf{Weiße Knoten: } werden für die Suche nie betrachtet\\
 	\textbf{Graue Knoten: } wurden besucht, es ist aber unklar, ob sie zur Ausgabe gehören\\
 	\textbf{Schwarze Knoten: } wurden besucht und gesamter Unterteilbaum gehört zur Ausgabe.
 \end{frame}
 
 \begin{frame}
-	\frametitle{{Bereichssuchen - 1D}}
+	\frametitle{{1D Bereichssuchen}}
 \begin{figure}[htbp]
 	\begin{center}
   	\includegraphics[width=.8\linewidth]{bilder/1d5}
@@ -72,7 +75,7 @@ Bereichssuche für [61, 90]
 
 
 \begin{frame}
-	\frametitle{Bereichssuchen - 1D SplitNode}
+	\frametitle{1D Bereichssuchen - SplitNode}
 	Sei $T$ der Baum und $x, x'$ zwei Werte mit $x \leq x'$\newline\newline
 	$FindeSplitNode(T, x, x')$\\
 	\begin{algorithmic}
@@ -88,7 +91,7 @@ Bereichssuche für [61, 90]
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bereichssuchen - 1D Pseudocode}
+	\frametitle{1D Bereichssuchen - Pseudocode}
 	$1DBereichssuche(T,x,x')$
 	\begin{algorithmic}
 	\State $v_{split} \gets FindSplitNode(T, x, x')$
@@ -112,7 +115,7 @@ Bereichssuche für [61, 90]
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bereichssuchen - 1D Laufzeit}
+	\frametitle{1D Bereichssuchen - Laufzeit}
 	\textbf{Graue Knoten: } Es gibt genau zwei Pfade mit grauen Knoten. Da der Baum balanciert ist $\Rightarrow O(log(n))$\\
 	\pause
 	\textbf{Schwarze Knoten: } Ein Teilbaum mit k Knoten hat k-1 interne Knoten. Wir finden also k Knoten durch das Traversieren $\Rightarrow O(k)$\newline
@@ -125,7 +128,7 @@ Bereichssuche für [61, 90]
 \end{frame}
 \subsection{kd-Baum}
 \begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	\frametitle{kd-Baum}
 	Im 2-dimensionalen sind Bereichssuchen ähnlich zu machen. \\
 	Dafür werden \textbf{kd-Bäume} benutzt.
 	\begin{figure}[htbp]
@@ -136,12 +139,13 @@ Bereichssuche für [61, 90]
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum Die Idee}
+	\frametitle{kd-Baum - Die Idee}
 	Wir bauen einen Baum ähnlich wie den für die 1-D Suche. Da wir im 2D x und y betrachten müssen, splitten wir beim kd-Baum nacheinander erst nach x und dann nach y auf.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	\frametitle{kd-Baum}
+	\only<1>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd0}}\quad
@@ -149,10 +153,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree0}}
 			}
 	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<2>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd1}}\quad
@@ -160,11 +162,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree1}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<3>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd2}}\quad
@@ -172,11 +171,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree2}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<4>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd3}}\quad
@@ -184,11 +180,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree3}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<5>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd4}}\quad
@@ -196,11 +189,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree4}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<6>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd5}}\quad
@@ -208,11 +198,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree5}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<7>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd6}}\quad
@@ -220,11 +207,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree6}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<8>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd7}}\quad
@@ -232,11 +216,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree7}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<9>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd8}}\quad
@@ -244,11 +225,8 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree8}}
 			}
 	\end{figure}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Bereichssuchen - kd-Baum}
+	}
+	\only<10>{
 		\begin{figure}
 		\mbox{
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd9}}\quad
@@ -256,4 +234,76 @@ Bereichssuche für [61, 90]
 			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree9}}
 			}
 	\end{figure}
+	}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{kd-Baum - Pseudocode}
+	$kdBaumBauen(P, tiefe)$
+	\begin{algorithmic}
+	\If	{$\mbox{P hat nur einen Punkt}$}
+		\State \Return Knoten mit diesem Punkt
+	\Else
+	\pause
+		\If{Tiefe ist gerade}
+			\State {Teile P mit einer vertikalen Linie $l$ durch den Median der x-Koordinate in $P_1$ (links von oder auf $l$) und $P_2$ (rechts von $l$)}
+		\pause
+		\Else
+			\State {Teile P mit einer horizontalen Linie $l$ durch den Median der y-Koordinate in $P_1$ (unter oder auf $l$) und $P_2$ (über $l$)}
+		\EndIf
+		\pause	
+		\State $v_{links} \gets kdBaumBauen(P_1, tiefe+1)$
+		\State $v_{rechts} \gets kdBaumBauen(P_2, tiefe+1)$
+		\pause
+		\State {Erstelle Knoten $v$, welches $l$ enthält mit $v_{left}$ als linkem und $v_{right}$ als rechtem Kind von $v$}
+		\State \Return $v$
+	\EndIf
+	\end{algorithmic}
+\end{frame}
+\begin{frame}
+	\frametitle{kd-Baum}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/regionv.png}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{kd-Baum}
+\begin{figure}[htbp]
+	\begin{center}
+  	\includegraphics[width=.8\linewidth]{bilder/kdsearch.png}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{kd-Baum - Pseudocode}
+	Seien v die Wurzel eines (Teil-)Baums und R der Bereich in dem gesucht wird.\\
+	$SucheKdBaum(v, R)$
+	\begin{algorithmic}
+	\If ($v$ ist ein Blatt)
+		\State Melde Punkt in $v$, falls es in R liegt.
+	\Else
+		\pause
+		{\If {$region(lc(v))\mbox{ ist vollständig in } R$}
+			\State $MeldeTeilbaum(lc(v))$
+			\pause
+		\Else
+			\If{$region(lc(v)) \mbox{ überschneidet sich mit } R$}
+				\State $SucheKdBaum(lc(v),R)$				
+			\EndIf
+		\EndIf
+		\pause
+		\If {$region(rc(v))\mbox{ ist vollständig in }R$}
+			\State $MeldeTeilbaum(rc(v))$
+		\Else
+			\If{$region(rc(v)) \mbox{ überschneidet sich mit } R$}
+				\State $SucheKdBaum(rc(v),R)$				
+			\EndIf
+		\EndIf}
+	\EndIf
+	\end{algorithmic}
 \end{frame}
