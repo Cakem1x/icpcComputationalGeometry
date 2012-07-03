@@ -14,25 +14,89 @@
 		\item Was hei"st geschickt?
 		\pause
 		\begin{itemize}
-			\item TODO: Weiter ausf\"uhren!
+			\item Der Algorithmus soll dadurch schneller werden
+			\pause
+			\item Das Ergebnis darf nicht verfälscht werden
 		\end{itemize}
 		\pause
-		\item Dadurch k\"onnen bestimmte Algorithmen beschleunigt werden
+		\item Also: Irrelevante Bereiche aussparen
 	\end{itemize}
 \end{frame}
 
-\subsection{Anwendungsgebiete}
+\subsection{Bei Fl\"achenberechnungen}
+\begin{frame}
+	\frametitle{{Fl\"achenberechnung}}
+	\begin{block}{Das Problem}
+	\begin{itemize}
+		\pause
+		\item{Eingabe:}
+		\pause
+		\begin{itemize}
+			\item Eine 2-dimensionale Figur
+			\item Bestehend aus Rechtecken
+			\begin{itemize}
+				\item Punkt unten links
+				\item Punkt oben rechts
+				\item Seiten parallel zu den Koordinatenachsen
+			\end{itemize}
+		\end{itemize}
+		\pause
+		\item{Ausgabe:}
+		\pause
+		\begin{itemize}
+			\item{Fl\"acheninhalt der Figur}
+		\end{itemize}
+	\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\frametitle{{Fl\"achenberechnung, erster Ansatz}}
+	\begin{itemize}
+		\item Iteration \"uber alle Datenfelder
+		\pause
+		\item Aufsummieren aller belegter Datenfelder
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{{Fl\"achenberechnung, erster Ansatz}}
+	\begin{itemize}
+		\item Iteration \"uber alle Datenfelder
+		\item Aufsummieren aller belegter Datenfelder
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.50]{bilder/kidding.png}		
+		\end{center}
+	\end{figure}
+\end{frame}
+\begin{frame}
+	\frametitle{{Fl\"achenberechnung mit Koordinatenkompression}}
+		\pause
+	\begin{itemize}
+		\item Vorarbeit
+		\pause
+		\begin{itemize}
+			\item Kompression auf ein Feld maximal der Gr\"o"se $\mathcal (2 \cdot \left|Rechtecke\right|)\times(2 \cdot \left|Rechtecke\right|)$
+			\pause
+			\item Kleiner, falls sich Rechtecke eine x- oder y-Stelle teilen
+			\pause
+			\item Merken der wahren Fl\"ache jedes Eintrags
+		\end{itemize}
+		\pause
+		\item Nun wie gehabt belegte Felder z\"ahlen
+			\pause
+		\begin{itemize}
+			\item dabei deren wahre Fl\"ache aufsummieren
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Weitere Anwendungsgebiete}
 \begin{frame}
 	\frametitle{{Anwendungsgebiete von Koordinatenkompression}}
 	\begin{itemize}
-		\item Volumen und Fl\"achenberechnung
+		\item Volumenberechnung
 		\pause
 		\item Bereichssuchen
-		\pause
-		\item TODO: Mehr finden, oder die beiden Punkte mehr ausschmücken!
-		\begin{itemize}
-			\item (TODO) Wodurch genau profitieren diese Algorithmen?
-			\item (TODO) Beispiel?
-		\end{itemize}
 	\end{itemize}
 \end{frame}
