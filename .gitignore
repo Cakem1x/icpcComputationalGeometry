@@ -28,6 +28,7 @@
 *.synctex.gz
 *.toc
 *.vrb
+thumbs.db
 *.xdy
 *.bcf
 *.run.xml
