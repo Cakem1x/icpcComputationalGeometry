@@ -80,9 +80,11 @@ Bereichssuche für [61, 90]
 	$FindeSplitNode(T, x, x')$\\
 	\begin{algorithmic}
 	\State $v \gets root(T)$
+	\pause
 	\While{v ist kein Blatt und ($x' \leq x_v \mbox{ oder } x>x_v$)}
 		\If{$x' \leq x_v$}
 			\State $v \gets lc(v)$
+			\pause
 		\Else
 			\State $v \gets rc(v)$
 		\EndIf
@@ -97,17 +99,21 @@ Bereichssuche für [61, 90]
 	\State $v_{split} \gets FindSplitNode(T, x, x')$
 	\If {$v_{split} \mbox{ist ein Blatt}$}
 		\State $\mbox{Prüfe ob }v_{split} \mbox{ gemeldet werden muss}$
+		\pause
 	\Else
 		\State $v \gets lc(v_{split})$
 		\While {$\mbox{v ist kein Blatt}$}
 			\If{$x \leq x_v$}
 				\State $meldeTeilbaum(rc(v))$
 				\State $v \gets lc(v)$
+				\pause
 			\Else 
 				\State $v\gets rc(v)$
 			\EndIf
 		\EndWhile
+		\pause
 		\State $\mbox{Prüfe, ob v gemeldet werden muss}$
+		\pause
 		\State $\mbox{mache das gleiche noch äquivalent mit x'...}$
 	\EndIf
 	\end{algorithmic}
@@ -148,90 +154,80 @@ Bereichssuche für [61, 90]
 	\only<1>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd0}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree0}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd0}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree0}}
 			}
 	\end{figure}
 	}
 	\only<2>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd1}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree1}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd1}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree1}}
 			}
 	\end{figure}
 	}
 	\only<3>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd2}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree2}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd2}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree2}}
 			}
 	\end{figure}
 	}
 	\only<4>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd3}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree3}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd3}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree3}}
 			}
 	\end{figure}
 	}
 	\only<5>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd4}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree4}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd4}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree4}}
 			}
 	\end{figure}
 	}
 	\only<6>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd5}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree5}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd5}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree5}}
 			}
 	\end{figure}
 	}
 	\only<7>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd6}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree6}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd6}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree6}}
 			}
 	\end{figure}
 	}
 	\only<8>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd7}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree7}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd7}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree7}}
 			}
 	\end{figure}
 	}
 	\only<9>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd8}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree8}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd8}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree8}}
 			}
 	\end{figure}
 	}
 	\only<10>{
 		\begin{figure}
 		\mbox{
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kd9}}\quad
-			\hspace{1cm}
-			\subfigure{\includegraphics[width=.47\linewidth]{bilder/kdtree9}}
+			\subfigure{\includegraphics[width=.45\linewidth]{bilder/kd9}}\quad
+			\subfigure{\includegraphics[width=.5\linewidth]{bilder/kdtree9}}
 			}
 	\end{figure}
 	}
@@ -306,4 +302,14 @@ Bereichssuche für [61, 90]
 		\EndIf}
 	\EndIf
 	\end{algorithmic}
+\end{frame}
+
+\begin{frame}
+	\frametitle{kd-Baum - Laufzeit}
+	Kurz noch einige ungezeigte Behauptungen:
+	\begin{itemize}
+		\item Ein kd-Baum braucht $O(n)$ Speicher
+		\item Ein kd-Baum lässt sich in $O(n*log(n))$ erstellen
+		\item Eine Bereichssuche in einem kd-Baum liegt in $O(\sqrt{n}+k)$
+	\end{itemize}
 \end{frame}
