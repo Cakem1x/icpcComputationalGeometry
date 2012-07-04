@@ -89,6 +89,7 @@ Bereichssuche für [61, 90]
 			\State $v \gets rc(v)$
 		\EndIf
 	\EndWhile
+	\State \Return $v$
 	\end{algorithmic}
 \end{frame}
 
@@ -291,15 +292,9 @@ Bereichssuche für [61, 90]
 			\If{$region(lc(v)) \mbox{ überschneidet sich mit } R$}
 				\State $SucheKdBaum(lc(v),R)$				
 			\EndIf
-		\EndIf
-		\pause
-		\If {$region(rc(v))\mbox{ ist vollständig in }R$}
-			\State $MeldeTeilbaum(rc(v))$
-		\Else
-			\If{$region(rc(v)) \mbox{ überschneidet sich mit } R$}
-				\State $SucheKdBaum(rc(v),R)$				
-			\EndIf
 		\EndIf}
+		\pause
+		\State $\mbox{Das ganze dann nochmal äquivalent mit rc(v)}$
 	\EndIf
 	\end{algorithmic}
 \end{frame}
